@@ -1,0 +1,36 @@
+{
+  "name": "egg-esk",
+  "private": true,
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "start": "egg-scripts start",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test-local": "egg-bin test",
+    "test": "yarn run lint -- --fix && yarn run test-local",
+    "cov": "egg-bin cov",
+    "tsc": "tsc -p tsconfig.json",
+    "ci": "yarn run lint && yarn run cov && yarn run tsc",
+    "lint": "eslint .",
+    "clean": "tsc -b --clean"
+  },
+  "dependencies": {
+    "egg": "latest",
+    "egg-scripts": "latest",
+    "egg-view-nunjucks": "latest",
+    "moment": "latest"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "latest",
+    "@types/cheerio": "latest",
+    "@types/mocha": "latest",
+    "cheerio": "latest",
+    "egg-bin": "latest",
+    "egg-mock": "latest",
+    "eslint": "latest",
+    "eslint-config-egg": "latest",
+    "typescript": "latest"
+  }
+}
