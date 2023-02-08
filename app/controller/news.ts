@@ -1,3 +1,5 @@
+// app/controller/news.ts
+
 import { Controller } from 'egg';
 
 export default class NewsController extends Controller {
@@ -5,7 +7,6 @@ export default class NewsController extends Controller {
     const { ctx, app } = this;
     const pageSize = app.config.news.pageSize;
     const page = parseInt(ctx.query.page, 10) || 1;
-
     const idList = await ctx.service.news.getTopStories(page);
 
     // get itemInfo parallel
@@ -17,6 +18,7 @@ export default class NewsController extends Controller {
     const { ctx } = this;
     const id = ctx.params.id;
     const newsInfo = await ctx.service.news.getItem(id);
+
     // get comment parallel
     const commentList = await Promise.all(newsInfo.kids.map(_id => ctx.service.news.getItem(_id)));
     await ctx.render('news/detail.tpl', { item: newsInfo, comments: commentList });

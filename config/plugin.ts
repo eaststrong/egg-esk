@@ -1,3 +1,5 @@
+// config/plugin.ts
+
 export default {
   nunjucks: {
     enable: true,
