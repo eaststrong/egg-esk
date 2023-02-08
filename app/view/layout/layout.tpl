@@ -1,3 +1,5 @@
+<!-- app/view/layout/layout.tpl -->
+
 <!doctype html>
 <html>
   <head>

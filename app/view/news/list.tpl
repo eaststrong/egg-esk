@@ -1,3 +1,5 @@
+<!-- app/view/news/list.tpl -->
+
 {% extends "../layout/layout.tpl" %}
 
 {% block content %}

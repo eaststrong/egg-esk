@@ -1,3 +1,5 @@
+// app/service/news.ts
+
 import { Service } from 'egg';
 
 export interface NewsItem {
