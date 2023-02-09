@@ -7,8 +7,8 @@
 ### Development
 
 ```bash
-$ npm i
-$ npm run dev
+$ yarnpkg
+$ yarnpkg run dev
 $ open http://localhost:7001/
 ```
 
@@ -17,17 +17,12 @@ Don't tsc compile at development mode, if you had run `tsc` then you need to `np
 ### Deploy
 
 ```bash
-$ npm run tsc
-$ npm start
+$ yarnpkg run tsc
+$ yarnpkg start
 ```
 
 ### Npm Scripts
 
-- Use `npm run lint` to check code style
-- Use `npm test` to run unit test
-- se `npm run clean` to clean compiled js at development mode once
-
-### Requirement
-
-- Node.js 16.x
-- Typescript 4.x
+- Use `yarnpkg run lint` to check code style
+- Use `yarnpkg test` to run unit test
+- se `yarnpkg run clean` to clean compiled js at development mode once
