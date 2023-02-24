@@ -5,16 +5,16 @@
     "typescript": true
   },
   "scripts": {
-    "start": "egg-scripts start",
-    "dev": "egg-bin dev",
-    "debug": "egg-bin debug",
-    "test-local": "egg-bin test",
-    "test": "yarn run lint -- --fix && yarn run test-local",
-    "cov": "egg-bin cov",
-    "tsc": "tsc -p tsconfig.json",
     "ci": "yarn run lint && yarn run cov && yarn run tsc",
+    "clean": "tsc -b --clean",
+    "cov": "egg-bin cov",
+    "debug": "egg-bin debug",
+    "dev": "egg-bin dev",
     "lint": "eslint .",
-    "clean": "tsc -b --clean"
+    "start": "egg-scripts start",
+    "test": "yarn run lint -- --fix && yarn run test-local",
+    "test-local": "egg-bin test",
+    "tsc": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "egg": "latest",
